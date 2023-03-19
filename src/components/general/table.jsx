@@ -10,51 +10,59 @@ import edit from '../../assets/edit.png'
 
 const Table = () => {
     const [data, setData] = useState([]);
+   
 
   // Fetch data from API or database
   useEffect(() => {
     // Your code to fetch data here
     // Example:
     setData([
-      { id: 1, name: 'John', age: 30, city: 'New York', country: 'USA' },
-      { id: 2, name: 'Emma', age: 25, city: 'London', country: 'UK' },
-      { id: 3, name: 'Mark', age: 35, city: 'Toronto', country: 'Canada' },
-      { id: 4, name: 'Anna', age: 27, city: 'Sydney', country: 'Australia' },
-      { id: 4, name: 'Anna', age: 27, city: 'Sydney', country: 'Australia' },
-      { id: 4, name: 'Anna', age: 27, city: 'Sydney', country: 'Australia' },
+      { id: 1, dateFrom: '19-05-2016', dateTo: '09-08-2020', status: 'New York', action: 'USA' },
+      { id: 2, dateFrom: '23-06-2016', dateTo: '02-04-2017', status: 'London', action: 'UK' },
+      { id: 3, dateFrom: '14-01-2017', dateTo: '22-01-2019', status: 'Toronto', action: 'Canada' },
+      { id: 4, dateFrom: '02-04-2017', dateTo: '09-08-2020', status: 'Sydney', action: 'Australia' },
+      { id: 5, dateFrom: '01-10-2017', dateTo: '22-01-2019', status: 'Paris', action: 'France' },
+      { id: 6, dateFrom: '11-12-2017', dateTo: '01-06-2018', status: 'Berlin', action: 'Germany' },
+      { id: 7, dateFrom: '01-06-2018', dateTo: '01-06-2018', status: 'Madrid', action: 'Spain' },
+      { id: 8, dateFrom: '22-01-2019', dateTo: '09-08-2020', status: 'Rome', action: 'Italy' },
+      { id: 9, dateFrom: '09-08-2020', dateTo: '22-01-2021', status: 'Athens', action: 'Greece' },
+      { id: 10, dateFrom: '14-01-2021', dateTo: '22-01-2022', status: 'Amsterdam', action: 'Netherlands' },
     ]);
   }, []);
+
+  
+
+  
+
+  
+
   return (
+    
     <table className=''>
         <tr className='border-b-2'>
-        <TableHead head='Ref No'/>
-        <TableHead head='Date From'/>
-        <TableHead head='Date to'/>
-        <TableHead head='Status'/>
-        <TableHead head='Action'/>
-          {/* <th className='text-left p-8' >Ref No</th>
-          <th className='text-left p-8'>Date From</th>
-          <th className='text-left p-8'>Date to</th>
-          <th className='text-left p-8'>Status</th>
-          <th className='text-left p-8'>Action</th> */}
+        <TableHead head='Ref No' className='p-6 text-left' />
+        <TableHead head='Date From' className='p-6 text-left'/>
+        <TableHead head='Date to' className='p-6 text-left'/>
+        <TableHead head='Status' className='p-6 text-left'/>
+        <TableHead head='Action' className='p-6 text-left'/>
         </tr>
         {data.map((item) => (
           <tr className='border-b-2 ' key={item.id}>
-            <TableData data={item.id}/>
-            <TableData data={item.name}/>
-            <TableData data={item.age}/>
-            <TableData data={item.city}/>
+            <TableData data={item.id} className='text-left p-4 px-6 lg:p-6' />
+            <TableData data={item.dateFrom} className='text-left p-4 px-6 lg:p-6 text-yellow-700 hover:text-yellow-500 cursor-pointer' />
+            <TableData data={item.dateTo} className='text-left p-4 px-6 lg:p-6' />
+            <TableData data={item.status} className='text-left p-4 px-6 lg:p-6' />
             <TableAction />
             
-            {/* <TableData data={item.country}/> */}
-            {/* <td className='text-left p-8 border-l-2'>{item.id}</td>
-            <td className='text-left p-8 border-l-2'>{item.name}</td>
-            <td className='text-left p-8'>{item.age}</td>
-            <td className='text-left p-8'>{item.city}</td> 
-            <td className='text-left p-8'>{item.country}</td> */}
+    
           </tr>
         ))}
     </table>
+
+    
+    
+
+
   )
 }
 

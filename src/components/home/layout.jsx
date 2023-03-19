@@ -62,18 +62,18 @@ const Layout = () => {
 
   return (
     <div>
-      <div className="fixed z-">
+      <div className="fixed ">
       <Navbar />
       </div>
 
-      <div className=" flex">
+      <div className=" flex ">
         
-    <div className="fixed">
+    <div className="fixed hidden lg:flex">
     <Navpanel handleItemClick={handlePanelItemClick} />
     </div>
         
         
-        <div className=" mt-14 ml-80 p-8 w-[calc(100vw-335px)]">{activePageComponent}</div>
+        <div className=" mt-14 lg:ml-80 p-8 w-screen lg:w-[calc(100vw-335px)] ">{activePageComponent}</div>
       </div>
     </div>
   )

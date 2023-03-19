@@ -1,9 +1,9 @@
 import React from 'react'
 
 const TableData = (props) => {
-    const {data} = props
+    const {data, className} = props
   return (
-    <td className='text-left p-8 border-l-2'>{data}</td>
+    <td className={className}>{data}</td>
   )
 }
 

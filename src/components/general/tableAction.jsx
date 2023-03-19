@@ -8,7 +8,7 @@ import edit from '../../assets/edit.png'
 const TableAction = () => {
   return (
     
-    <td className='text-left p-8 border-l-2 flex items-center justify-between'>
+    <td className='text-left p-6 flex items-center justify-between'>
     <button><img src={view} alt="" className='h-5'/></button>
     <button><img src={edit} alt="" className='h-5'/></button>
     <button><img src={trash} alt="" className='h-5'/></button>

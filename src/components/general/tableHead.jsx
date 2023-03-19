@@ -1,9 +1,9 @@
 import React from 'react'
 
 const TableHead = (props) => {
-    const {head} = props
+    const {head, className} = props
   return (
-    <th className='text-left p-8 border-l-2'>{head}</th>
+    <th className={className}>{head}</th>
   )
 }
 
