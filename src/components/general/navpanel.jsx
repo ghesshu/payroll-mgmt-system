@@ -73,11 +73,11 @@ const Navpanel = (props) => {
     // </div>
     // </>
 
-    <div className="flex flex-col bg-yellow-600 w-80 mt-14 space-y-12">
+    <div className="flex flex-col bg-yellow-600 w-16 lg:w-80  mt-14 space-y-12">
 
       <div className="flex flex-col items-center justify-center mt-12 space-y-2">
-      <img src={user} alt="" className='h-28 border-4 p-2 border-yellow-500 rounded-full' />
-      <h1 className='font-bold text-white'>ADMINISTRATOR</h1>
+      <img src={user} alt="" className='h-14 lg:h-28 border-4 p-2 border-yellow-500 rounded-full' />
+      <h1 className='hidden lg:block font-bold text-white'>ADMINISTRATOR</h1>
       </div>
       <div className='flex flex-col h-screen '>
       <PanelItem

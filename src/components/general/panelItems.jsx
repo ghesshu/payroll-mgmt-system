@@ -34,7 +34,7 @@ const PanelItem = (props) => {
         }`}
       >
         <img src={image} alt="" className="h-7 bg-yelow-500" />
-        <h1 className="text-white">{text}</h1>
+        <h1 className="text-white hidden lg:block transition ease-in-out duration-300">{text}</h1>
       </button>
     </div>
   );
