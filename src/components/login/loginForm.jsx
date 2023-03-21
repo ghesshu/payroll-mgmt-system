@@ -1,5 +1,5 @@
 import React from 'react';
-import Input from '../general/Input';
+import ImgInput from '../general/imgInput';
 import Button from '../general/button';
 import { useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -27,8 +27,8 @@ let iClass = 'w-full py-3 text-base px-2'
   return (
     <form onSubmit={handleSubmit} className='space-y-6'>
         
-      <Input image={user} classs={inputStyles} inputClass={iClass}  label="" type="email" id="email" inputRef={emailRef} />
-      <Input image={lock} classs={inputStyles} inputClass={iClass} label="" type="password" id="password" inputRef={passwordRef} />
+      <ImgInput image={user} classs={inputStyles} inputClass={iClass}  label="" type="email" id="email" inputRef={emailRef} />
+      <ImgInput image={lock} classs={inputStyles} inputClass={iClass} label="" type="password" id="password" inputRef={passwordRef} />
       <Button text="login" onClick={handleSubmit} className={buttonStyle}/>
     </form>
   );

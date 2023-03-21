@@ -2,11 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+div input {
+  box-sizing: border-box;
+  /* box-sizing: content-box; */
+}
+
+
+
 textarea:focus,
 input:focus,
-button:focus {
+button:focus,
+select:focus {
   outline: none;
 }
+
+
 
 table {
   width: 100%;
