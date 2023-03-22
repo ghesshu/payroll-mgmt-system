@@ -1,9 +1,9 @@
 import React from 'react'
 import { useState } from 'react'
 import add from '../../assets/add.png'
-import Search from '../general/search'
-import EmployeeTable from '../general/employeeTable'
-import NewEmployee from './newEmployee'
+import Search from '../../components/general/search'
+import EmployeeTable from '../../components/general/employeeTable'
+import NewEmployee from '../../components/pages/newEmployee'
 
 
 const EmployeeList = () => {

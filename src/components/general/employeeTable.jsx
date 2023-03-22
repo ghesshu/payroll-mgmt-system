@@ -1,10 +1,13 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import TableData from './tableData'
 import TableHead from './tableHead'
 
 const EmployeeTable = () => {
     const [data, setData] = useState([]);
+
+    const navigate = useNavigate()
    
 
   // Fetch data from API or database
@@ -22,6 +25,15 @@ const EmployeeTable = () => {
         { id: 8, Employees: 'Lisa Wong', Department: 'IT', Position: 'Administrator', AccountNumber: '890123', TelephoneNumber: '555-8901', },
         { id: 9, Employees: 'Samuel Lee', Department: 'Operations', Position: 'Supervisor', AccountNumber: '901234', TelephoneNumber: '555-9012', },
         { id: 10, Employees: 'Olivia Rodriguez', Department: 'Sales', Position: 'Associate', AccountNumber: '012345', TelephoneNumber: '555-0123', },
+        { id: 10, Employees: 'Olivia Rodriguez', Department: 'Sales', Position: 'Associate', AccountNumber: '012345', TelephoneNumber: '555-0123', },
+        { id: 10, Employees: 'Olivia Rodriguez', Department: 'Sales', Position: 'Associate', AccountNumber: '012345', TelephoneNumber: '555-0123', },
+        { id: 10, Employees: 'Olivia Rodriguez', Department: 'Sales', Position: 'Associate', AccountNumber: '012345', TelephoneNumber: '555-0123', },
+        { id: 10, Employees: 'Olivia Rodriguez', Department: 'Sales', Position: 'Associate', AccountNumber: '012345', TelephoneNumber: '555-0123', },
+        { id: 10, Employees: 'Olivia Rodriguez', Department: 'Sales', Position: 'Associate', AccountNumber: '012345', TelephoneNumber: '555-0123', },
+        { id: 10, Employees: 'Olivia Rodriguez', Department: 'Sales', Position: 'Associate', AccountNumber: '012345', TelephoneNumber: '555-0123', },
+        { id: 10, Employees: 'Olivia Rodriguez', Department: 'Sales', Position: 'Associate', AccountNumber: '012345', TelephoneNumber: '555-0123', },
+        { id: 10, Employees: 'Olivia Rodriguez', Department: 'Sales', Position: 'Associate', AccountNumber: '012345', TelephoneNumber: '555-0123', },
+        { id: 10, Employees: 'Olivia Rodriguez', Department: 'Sales', Position: 'Associate', AccountNumber: '012345', TelephoneNumber: '555-0123', },
   ]);  
   }, []);
 
@@ -37,7 +49,7 @@ const EmployeeTable = () => {
         {data.map((item) => (
           <tr className='border-b-2 ' key={item.id}>
           <TableData data={item.id} className='text-left p-4 px-6 lg:p-6' />
-          <TableData data={item.Employees} className='text-left p-4 px-6 lg:p-6 text-yellow-700 hover:text-yellow-500 cursor-pointer' />
+          <a href={navigate('')}><TableData data={item.Employees} className='text-left p-4 px-6 lg:p-6 text-yellow-700 hover:text-yellow-500 cursor-pointer' /></a>
           <TableData data={item.Department} className='text-left p-4 px-6 lg:p-6' />
           <TableData data={item.Position} className='text-left p-4 px-6 lg:p-6' /> 
           <TableData data={item.AccountNumber} className='text-left p-4 px-6 lg:p-6' />

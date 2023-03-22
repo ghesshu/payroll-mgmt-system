@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import home from '../../assets/home.png'
 import PanelItem from './panelItems'
 // import home from '../../assets/home.png';
@@ -15,131 +16,69 @@ import users from '../../assets/users.png';
 import user from '../../assets/homeUser.png'
 
 const Navpanel = (props) => {
+  const {homeActive, payrollActive, employeesActive, departmentActive, allowanceActive, deductionActive} = props
   return (
-    // <>
-    // <div className=' mt-14 flex flex-col h-screen bg-slate-800 w-80'>
 
-    // <PanelItems
-    //     button={props.homeClick}
-    //     image={home}
-    //     text="Home"
-    //   />
-    //   <PanelItems
-    //     button={props.aboutClick}
-    //     image={home}
-    //     text="About"
-    //   />
-    //   <PanelItems
-    //     button={props.attendanceClick}
-    //     image={home}
-    //     text="Attendance"
-    //   />
-    //   <PanelItems
-    //     button={props.pListClick}
-    //     image={home}
-    //     text="Payroll List"
-    //   />
-    //   <PanelItems
-    //     button={props.eListClick}
-    //     image={home}
-    //     text="Employee List"
-    //   />
-    //   <PanelItems
-    //     button={props.dListClick}
-    //     image={home}
-    //     text="Department List"
-    //   />
-    //   <PanelItems
-    //     button={props.pListClick}
-    //     image={home}
-    //     text="Position List"
-    //   />
-    //   <PanelItems
-    //     button={props.aListClick}
-    //     image={home}
-    //     text="Allowance List"
-    //   />
-    //   <PanelItems
-    //     button={props.deductionClick}
-    //     image={home}
-    //     text="Deduction List"
-    //   />
-    //   <PanelItems
-    //     button={props.usersClick}
-    //     image={home}
-    //     text="Users"
-    //   />
 
-    // </div>
-    // </>
-
-    <div className="flex flex-col bg-yellow-600 w-16 lg:w-80  mt-14 space-y-12">
+    <div className="flex flex-col bg-yellow-500 w-16 lg:w-80  mt-14 space-y-12">
 
       <div className="flex flex-col items-center justify-center mt-12 space-y-2">
-      <img src={user} alt="" className='h-14 lg:h-28 border-4 p-2 border-yellow-500 rounded-full' />
+      <img src={user} alt="" className='h-14 lg:h-28 border-4 p-2 border-yellow-300 rounded-full' />
       <h1 className='hidden lg:block font-bold text-white'>ADMINISTRATOR</h1>
       </div>
       <div className='flex flex-col h-screen '>
+      
+      <Link to="/home">
       <PanelItem
-        onClick={() => props.handleItemClick('home')}
+        // onClick={() => props.handleItemClick('home')}
         image={home}
         text='Home'
-        active={props.activeItem === 'home'}
+        active={homeActive}
       />
+      </Link>
+      
+      <Link to="/payroll">
       <PanelItem
-        onClick={() => props.handleItemClick('about')}
-        image={about}
-        text='About'
-        active={props.activeItem === 'about'}
-      />
-      <PanelItem
-        onClick={() => props.handleItemClick('attendance')}
-        image={attendance}
-        text='Attendance'
-        active={props.activeItem === 'attendance'}
-      />
-      <PanelItem
-        onClick={() => props.handleItemClick('payroll')}
+        // onClick={() => props.handleItemClick('payroll')}
         image={payroll}
-        text='Payroll List'
-        active={props.activeItem === 'payroll'}
+        text='Payroll'
+        active={payrollActive}
       />
+      </Link>
+      <Link to="/employees">
       <PanelItem
-        onClick={() => props.handleItemClick('employee')}
+        // onClick={() => props.handleItemClick('employee')}
         image={employee}
-        text='Employee List'
-        active={props.activeItem === 'employee'}
+        text='Employees'
+        active={employeesActive}
       />
+      </Link>
+      <Link to="/department">
       <PanelItem
-        onClick={() => props.handleItemClick('department')}
+        // onClick={() => props.handleItemClick('department')}
         image={department}
-        text='Department List'
-        active={props.activeItem === 'department'}
+        text='Departments'
+        active={departmentActive}
       />
+      </Link>
+
+      <Link to="/allowance">
       <PanelItem
-        onClick={() => props.handleItemClick('position')}
-        image={position}
-        text='Position List'
-        active={props.activeItem === 'position'}
-      />
-      <PanelItem
-        onClick={() => props.handleItemClick('allowance')}
+        // onClick={() => props.handleItemClick('allowance')}
         image={allowance}
-        text='Allowance List'
-        active={props.activeItem === 'allowance'}
+        text='Allowance'
+        active={allowanceActive}
       />
+      </Link>
+
+      <Link to="/deduction">
       <PanelItem
-        onClick={() => props.handleItemClick('deduction')}
+        // onClick={() => props.handleItemClick('deduction')}
         image={deduction}
-        text='Deduction List'
-        active={props.activeItem === 'deduction'}
+        text='Deductions'
+        active={deductionActive}
       />
-      <PanelItem
-        onClick={() => props.handleItemClick('users')}
-        image={users}
-        text='Users'
-        active={props.activeItem === 'users'}
-      />
+      </Link>
     </div>
     </div>
   )

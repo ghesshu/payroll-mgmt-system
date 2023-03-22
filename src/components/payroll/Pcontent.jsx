@@ -1,9 +1,10 @@
 import React from 'react'
 import add from '../../assets/add.png'
-import Table from '../general/table'
-import Search from '../general/search'
+import Table from '../../components/general/table'
+import Search from '../../components/general/search'
 
-const PayrolList = () => {
+
+const payroll = () => {
   return (
     <div>
       <div className="text-slate-600">
@@ -32,4 +33,4 @@ const PayrolList = () => {
   )
 }
 
-export default PayrolList
+export default payroll

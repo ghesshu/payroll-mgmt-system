@@ -25,6 +25,7 @@ const NewEmployee = (props) => {
   //   const dob = dobRef.current.value;
   //   console.log(name, gender);
   //   // navigate('/home')
+
   // };
 
   const options = [

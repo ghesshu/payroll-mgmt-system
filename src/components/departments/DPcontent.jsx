@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Users = () => {
+const DPcontent = () => {
   return (
     <div>
-      USers
+    Departments
     </div>
   )
 }
 
-export default Users
+export default DPcontent

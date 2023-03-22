@@ -1,11 +1,12 @@
 import React from 'react'
 
-const About = () => {
+
+const Acontent = () => {
   return (
     <div>
-      About
+      Allowance
     </div>
   )
 }
 
-export default About
+export default Acontent
