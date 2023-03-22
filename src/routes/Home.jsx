@@ -9,7 +9,7 @@ const Home = () => {
 
   return (
     <div className=''>
-    <Layout page={<Hcontent />} homeActive='border-b-white' />
+    <Layout page={<Hcontent />} homeActive='after:border-b-white' />
     
     </div>
   )

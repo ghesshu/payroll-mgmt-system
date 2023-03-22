@@ -10,8 +10,8 @@ const Input = (props) => {
         className={inputClass}
         type={type}
         placeholder={placeholder}
-        ref={inputRef}
-        // onChange={(e) => setName(e.target.value)}
+        
+        
       />
     </>
   )

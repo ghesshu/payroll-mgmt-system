@@ -1,7 +1,6 @@
 import React from 'react'
 import Input from '../general/input'
 import { useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
 import Select from '../general/select';
 
 const NewEmployee = (props) => {
