@@ -3,7 +3,7 @@ import { useState } from 'react'
 import add from '../../assets/add.png'
 import Search from '../../components/general/search'
 import EmployeeTable from '../../components/general/employeeTable'
-import NewEmployee from '../../components/pages/newEmployee'
+import NewEmployee from './newEmployee'
 
 
 const EmployeeList = () => {
